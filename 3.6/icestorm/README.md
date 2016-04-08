@@ -15,11 +15,11 @@ IceStorm is a publish-subscribe event distribution service that helps you create
 docker run --name some-icestorm -v /path/to/config:/config.icestorm:ro -d zeroc/icestorm
 ```
 
-Refer to the  [IceStorm documenation](https://doc.zeroc.com/display/Ice/IceStorm) for more information on how to configure IceStorm.
+Refer to the  [IceStorm documentation](https://doc.zeroc.com/display/Ice/IceStorm) for more information on how to configure IceStorm.
 
 ## Database volume
 
-The IceStorm container does its database data in a Docker volume mounted at `/db`.
+The IceStorm container stores its data in a Docker volume mounted at `/db`.
 
 ```
 docker run --name some-icestorm -v /path/to/config:/config.icestorm:ro -v/path/to/folder:/db -d zeroc/icestorm
@@ -47,7 +47,7 @@ IceStorm.TopicManager.PublishedEndpoints=default -h <docker host ip> -p 10000
 # IceGrid).
 #
 IceStorm.Publish.Endpoints=tcp -h localhost -p 10001:udp -h localhost -p 10001
-IceStorm.Publish.Endpoints=tcp -h <docker host ip> -p 10001:udp -h <docker host ip> -p 10001
+IceStorm.Publish.PublishedEndpoints=tcp -h <docker host ip> -p 10001:udp -h <docker host ip> -p 10001
 #
 # TopicManager Tracing
 #
@@ -91,12 +91,6 @@ IceStorm.Flush.Timeout=2000
 # 3 = like 2, but also trace data transfer
 #
 #Ice.Trace.Network=1
-
-#
-# This property defines the home directory of the LMDB
-# database environment for the IceStorm service.
-#
-IceStorm.LMDB.Path=db
 
 #
 # IceMX configuration.

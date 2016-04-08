@@ -14,6 +14,6 @@ RUN apt-key adv --keyserver hkp://pgp.mit.edu:80 --recv-keys 5E6DA83306132997 \
 
 VOLUME "/db"
 
-ENTRYPOINT ["/usr/bin/icebox", \
-            "--IceBox.Service.IceStorm=IceStormService,36:createIceStorm --Ice.Config=/config.icestorm", \
-            "--Freeze.DbEnv.IceStorm.DbHome=/db"]
+ENTRYPOINT ["/usr/bin/icebox", "--IceBox.Service.IceStorm=IceStormService,36:createIceStorm \
+                                                          --Freeze.DbEnv.IceStorm.DbHome=/db \
+                                                          --Ice.Config=/config.icestorm"]
