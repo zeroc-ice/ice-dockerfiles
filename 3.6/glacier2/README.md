@@ -12,7 +12,7 @@ A Glacier2 router allows you to securely route [Ice](https://zeroc.com) communic
 ## Start `glacier2` service
 
 ```
-docker run --name some-glacier2 -v /path/to/config:/etc/glacier2router.conf:ro -d glacier2
+docker run --name some-glacier2 -v /path/to/config:/etc/glacier2router.conf:ro -d zeroc/glacier2
 ```
 
 Refer to the  [Glacier2 documenation](https://doc.zeroc.com/display/Ice/Glacier2) for more information on how to configure Glacier2.
@@ -20,10 +20,10 @@ Refer to the  [Glacier2 documenation](https://doc.zeroc.com/display/Ice/Glacier2
 ## Exposing ports
 
 ```
-docker run --name some-glacier2 -p 4064:4064 -v /path/to/config:/etc/glacier2router.conf:ro -d glacier2
+docker run --name some-glacier2 -p 4064:4064 -v /path/to/config:/etc/glacier2router.conf:ro -d zeroc/glacier2
 ```
 
-# Sample Configuration
+## Sample Configuration
 
 ```
 #
