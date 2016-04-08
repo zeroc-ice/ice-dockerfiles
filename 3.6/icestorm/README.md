@@ -15,7 +15,7 @@ IceStorm is a publish-subscribe event distribution service that helps you create
 docker run --name some-icestorm -v /path/to/config:/config.icestorm:ro -d zeroc/icestorm
 ```
 
-Refer to the  [IceStorm documenation](https://doc.zeroc.com/display/Ice/IceStorm) for more information on how to configure Glacier2.
+Refer to the  [IceStorm documenation](https://doc.zeroc.com/display/Ice/IceStorm) for more information on how to configure IceStorm.
 
 ## Database volume
 
