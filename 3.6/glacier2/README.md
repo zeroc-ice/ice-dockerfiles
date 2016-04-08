@@ -17,7 +17,7 @@ docker run --name some-glacier2 -v /path/to/config:/etc/glacier2router.conf:ro -
 
 Refer to the  [Glacier2 documenation](https://doc.zeroc.com/display/Ice/Glacier2) for more information on how to configure Glacier2.
 
-## exposing ports
+## Exposing ports
 
 ```
 docker run --name some-glacier2 -p 4064:4064 -v /path/to/config:/etc/glacier2router.conf:ro -d glacier2
