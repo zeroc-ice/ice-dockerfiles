@@ -26,6 +26,7 @@ docker run --name some-icegridnode -v /path/to/config:/etc/icegridnode.conf:ro -
 
 ## Sample Configuration
 
+```
 #
 # Sample configuration file for the IceGrid node daemon
 #
@@ -72,3 +73,4 @@ IceGrid.Node.Output=/var/lib/ice/icegrid/node1
 Ice.UseSyslog=1
 Ice.ProgramName=icegridnode (DemoIceGrid node1)
 IceGrid.Node.Trace.Replica=2
+```
