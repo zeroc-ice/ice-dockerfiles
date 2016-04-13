@@ -34,8 +34,8 @@ docker run --name some-icegridnode -v /path/to/config:/etc/icegridnode.conf:ro -
 #
 # Proxy to the IceGrid registry
 #
-Ice.Default.Locator=DemoIceGrid/Locator:tcp -h <docker image name> -p 4061
-#Ice.Default.Locator=DemoIceGrid/Locator:ssl -h <docker image name> -p 4062
+Ice.Default.Locator=DemoIceGrid/Locator:tcp -h <docker icegrid registry name>  -p 4061
+#Ice.Default.Locator=DemoIceGrid/Locator:ssl -h <docker icegrid registry name>  -p 4062
 
 #
 # The name of this node; must be unique within an IceGrid deployment
