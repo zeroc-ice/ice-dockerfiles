@@ -5,7 +5,7 @@
 
 # What is Glacier2?
 
-A Glacier2 router allows you to securely route [Ice](https://zeroc.com) communications across networks, such as the public Internet and a private network behind a firewall. With Glacier2, you only need to open one port in your firewall to make multiple back-end Ice servers reachable by remote Ice clients on the Internet. These clients and servers can be on their own local networks behind firewalls and NATs - you don't need to worry about translating addresses and ports as Glacier2 handles all this for you.
+[Glacier2](https://zeroc.com/products/ice/services/glacier2) allows you to securely route [Ice](https://zeroc.com) communications across networks, such as the public Internet and a private network behind a firewall. With Glacier2, you only need to open one port in your firewall to make multiple back-end Ice servers reachable by remote Ice clients on the Internet. These clients and servers can be on their own local networks behind firewalls and NATs - you don't need to worry about translating addresses and ports as Glacier2 handles all this for you.
 
 # How to use this image
 

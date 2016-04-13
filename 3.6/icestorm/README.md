@@ -5,7 +5,7 @@
 
 # What is IceStorm?
 
-IceStorm is a publish-subscribe event distribution service that helps you create push applications using the [Ice](https://zeroc.com) RPC framework.
+[IceStorm](https://zeroc.com/products/ice/services/icestorm) is a publish-subscribe event distribution service that helps you create push applications using the [Ice](https://zeroc.com) RPC framework.
 
 # How to use this image
 
