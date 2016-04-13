@@ -2,7 +2,7 @@
 
 -   [`latest`, `3.6`, `3.6.2` (*3.6/icegridregistry/Dockerfile*)](https://github.com/zeroc-ice/ice-dockerfiles/blob/master/3.6/icegridregistry/Dockerfile)
 
-# What is an IceGrid?
+# What is IceGrid?
 
 [IceGrid](https://zeroc.com/products/ice/services/icegrid) is a location and activation service for [Ice](https://zeroc.com) applications.
 
