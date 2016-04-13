@@ -9,7 +9,7 @@ RUN apt-key adv --keyserver hkp://pgp.mit.edu:80 --recv-keys 5E6DA83306132997 \
     && apt-get update \
     && apt-get install --no-install-recommends --no-install-suggests -y \
         zeroc-glacier2=${GLACIER2_VERSION}-* \
-    && rm -rf /var/lib/apt/lists/*
+    && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 EXPOSE 4063 4064
 

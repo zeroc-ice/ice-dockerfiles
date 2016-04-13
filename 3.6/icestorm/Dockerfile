@@ -12,8 +12,8 @@ RUN apt-key adv --keyserver hkp://pgp.mit.edu:80 --recv-keys 5E6DA83306132997 \
         libzeroc-icestorm3.6=${ICEBOX_VERSION}-* \
     && rm -rf /var/lib/apt/lists/*
 
-VOLUME "/db"
+VOLUME ["/data"]
 
 ENTRYPOINT ["/usr/bin/icebox", "--IceBox.Service.IceStorm=IceStormService,36:createIceStorm \
-                                                          --Freeze.DbEnv.IceStorm.DbHome=/db \
-                                                          --Ice.Config=/config.icestorm"]
+                                                          --Ice.Config=/config.icestorm \
+                                                          --Freeze.DbEnv.IceStorm.DbHome=/data"]

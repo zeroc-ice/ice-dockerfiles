@@ -40,11 +40,9 @@ Glacier2.InstanceName=MyGlacier2Router
 #
 # Using tcp is not recommended for production!
 #
-Glacier2.Client.Endpoints=tcp -p 4063 -h localhost
-#Glacier2.Client.Endpoints=ssl -p 4064 -h localhost
+Glacier2.Client.Endpoints=tcp -p 4063 -h <docker image name>
+#Glacier2.Client.Endpoints=ssl -p 4064 -h <docker image name>
 
-Glacier2.Client.PublishedEndpoints=tcp -p 4063 -h <docker host ip>
-#Glacier2.Client.PublishedEndpoints=ssl -p 4064 -h <docker host ip>
 #
 # The server-visible endpoint of Glacier2. This endpoint is only
 # required if callbacks are needed (leave empty otherwise). This
@@ -52,8 +50,7 @@ Glacier2.Client.PublishedEndpoints=tcp -p 4063 -h <docker host ip>
 # on the loopback, so that the server is not directly accessible from
 # the Internet.
 #
-Glacier2.Server.Endpoints=tcp -h localhost -p <some port>
-Glacier2.Server.PublishedEntpoints=tcp -h <docker host ip> -p <some port>
+Glacier2.Server.Endpoints=tcp -h <docker image name>  -p <some port>
 
 #
 # This permissions verifier allows any user-id / password combination;

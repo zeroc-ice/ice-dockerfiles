@@ -37,8 +37,7 @@ IceStorm.InstanceName=MyIceStorm
 # This property defines the endpoints on which the IceStorm
 # TopicManager listens.
 #
-IceStorm.TopicManager.Endpoints=default -h localhost -p 10000
-IceStorm.TopicManager.PublishedEndpoints=default -h <docker host ip> -p 10000
+IceStorm.TopicManager.Endpoints=default -h <docker image name> -p 10000
 
 #
 # This property defines the endpoints on which the topic
@@ -46,8 +45,7 @@ IceStorm.TopicManager.PublishedEndpoints=default -h <docker host ip> -p 10000
 # IceStorm instances this must run on a fixed port (or use
 # IceGrid).
 #
-IceStorm.Publish.Endpoints=tcp -h localhost -p 10001:udp -h localhost -p 10001
-IceStorm.Publish.PublishedEndpoints=tcp -h <docker host ip> -p 10001:udp -h <docker host ip> -p 10001
+IceStorm.Publish.Endpoints=tcp -h <docker image name> -p 10001:udp -h <docker image name> -p 10001
 #
 # TopicManager Tracing
 #
@@ -95,7 +93,7 @@ IceStorm.Flush.Timeout=2000
 #
 # IceMX configuration.
 #
-#Ice.Admin.Endpoints=tcp -h localhost -p 10004
+#Ice.Admin.Endpoints=tcp -h <docker image name> -p 10004
 Ice.Admin.InstanceName=icestorm
 IceMX.Metrics.Debug.GroupBy=id
 IceMX.Metrics.ByParent.GroupBy=parent
