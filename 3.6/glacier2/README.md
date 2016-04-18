@@ -20,7 +20,7 @@ Refer to the  [Glacier2 documentation](https://doc.zeroc.com/display/Ice/Glacier
 ## Exposing ports
 
 ```
-docker run --name some-glacier2 -p 4064:4064 -v /path/to/config:/etc/glacier2router.conf:ro -d zeroc/glacier2
+docker run --name some-glacier2 -p 4063-4064:4063-4064 -v /path/to/config:/etc/glacier2router.conf:ro -d zeroc/glacier2
 ```
 
 ## Sample Configuration
