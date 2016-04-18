@@ -55,16 +55,9 @@ IceGrid.Node.Name=node1
 IceGrid.Node.Endpoints=tcp -h <docker image name> -p <some port>
 
 #
-# The directory where the IceGrid node maintains its data
-# (server configuration files etc.)
-# This directory must exist when icegridnode starts
-#
-IceGrid.Node.Data=/var/lib/ice/icegrid/node1
-
-#
 # Redirect the servers'stdout and stderr to files in this directory:
 #
-IceGrid.Node.Output=/var/lib/ice/icegrid/node1
+IceGrid.Node.Output=/var/lib/ice/icegrid
 #IceGrid.Node.RedirectErrToOut=1
 
 #

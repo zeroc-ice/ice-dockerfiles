@@ -66,11 +66,6 @@ IceGrid.Registry.Server.Endpoints=tcp -h <docker image name> -p <some port>
 IceGrid.Registry.Internal.Endpoints=tcp -h <docker image name> -p <some port>
 
 #
-# The registry DB home; must exist when icegridregistry starts
-#
-IceGrid.Registry.Data=/var/lib/ice/icegrid/registry
-
-#
 # Authentication/authorization
 # With NullPermissionsVerifier, any password is accepted (not recommended
 # for production)

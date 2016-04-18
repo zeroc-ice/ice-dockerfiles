@@ -15,4 +15,4 @@ EXPOSE 4061 4062
 
 VOLUME ["/var/lib/ice/icegrid"]
 
-ENTRYPOINT ["/usr/bin/icegridnode", "--Ice.Config=/etc/icegridnode.conf"]
+ENTRYPOINT ["/usr/bin/icegridnode", "--Ice.Config=/etc/icegridnode.conf", "--IceGrid.Node.Data=/var/lib/ice/icegrid"]

@@ -12,17 +12,17 @@
 ## Start `icestorm` service
 
 ```
-docker run --name some-icestorm -v /path/to/config:/config.icestorm:ro -d zeroc/icestorm
+docker run --name some-icestorm -v /path/to/config:/etc/icestorm.conf:ro -d zeroc/icestorm
 ```
 
 Refer to the  [IceStorm documentation](https://doc.zeroc.com/display/Ice/IceStorm) for more information on how to configure IceStorm.
 
 ## Database volume
 
-The IceStorm container stores its data in a Docker volume mounted at `/db`.
+The IceStorm container stores its data in a Docker volume mounted at `/data`.
 
 ```
-docker run --name some-icestorm -v /path/to/config:/config.icestorm:ro -v/path/to/folder:/db -d zeroc/icestorm
+docker run --name some-icestorm -v /path/to/config:/etc/icestorm.conf:ro -v/path/to/folder:/data -d zeroc/icestorm
 ```
 
 ## Sample Configuration
@@ -37,7 +37,7 @@ IceStorm.InstanceName=MyIceStorm
 # This property defines the endpoints on which the IceStorm
 # TopicManager listens.
 #
-IceStorm.TopicManager.Endpoints=default -h <docker image name> -p 10000
+IceStorm.TopicManager.Endpoints=tcp -h <docker image name> -p 10000
 
 #
 # This property defines the endpoints on which the topic
