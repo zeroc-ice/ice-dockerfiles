@@ -2,7 +2,7 @@ FROM ubuntu:14.04
 
 MAINTAINER ZeroC, Inc. docker-maintainers@zeroc.com
 
-ENV ICEGRID_VERSION 3.6.2
+ENV ICEGRID_VERSION 3.6.3
 
 RUN apt-key adv --keyserver keyserver.ubuntu.com --recv 5E6DA83306132997 \
     && echo "deb http://zeroc.com/download/apt/ubuntu14.04 stable main" >> /etc/apt/sources.list.d/ice.list \

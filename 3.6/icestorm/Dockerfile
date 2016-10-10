@@ -2,7 +2,7 @@ FROM debian:jessie
 
 MAINTAINER ZeroC, Inc. docker-maintainers@zeroc.com
 
-ENV ICEBOX_VERSION 3.6.2
+ENV ICEBOX_VERSION 3.6.3
 
 RUN apt-key adv --keyserver hkp://pgp.mit.edu:80 --recv-keys 5E6DA83306132997 \
     && echo "deb http://download.zeroc.com/apt/debian8 stable main" >> /etc/apt/sources.list.d/ice.list \
