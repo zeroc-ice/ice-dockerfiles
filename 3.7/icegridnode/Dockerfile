@@ -1,11 +1,11 @@
-FROM ubuntu:14.04
+FROM ubuntu:16.04
 
 MAINTAINER ZeroC, Inc. docker-maintainers@zeroc.com
 
-ENV ICEGRID_VERSION 3.6.3
+ENV ICEGRID_VERSION 3.7.0
 
-RUN apt-key adv --keyserver keyserver.ubuntu.com --recv 5E6DA83306132997 \
-    && echo "deb http://download.zeroc.com/Ice/3.6/ubuntu14.04 stable main" >> /etc/apt/sources.list.d/ice.list \
+RUN apt-key adv --keyserver keyserver.ubuntu.com --recv B6391CB2CFBA643D \
+    && echo "deb http://download.zeroc.com/Ice/3.7/ubuntu16.04 stable main" >> /etc/apt/sources.list.d/ice.list \
     && apt-get update \
     && apt-get install --no-install-recommends --no-install-suggests -y \
             zeroc-icegrid=${ICEGRID_VERSION}-* \

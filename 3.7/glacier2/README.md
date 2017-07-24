@@ -1,7 +1,7 @@
 # Supported tags and respective `Dockerfile` links
 
--   [`latest`, `3.6`, `3.6.3` (*3.6/glacier2/Dockerfile*)](https://github.com/zeroc-ice/ice-dockerfiles/blob/master/3.6/glacier2/Dockerfile)
-
+-   [`latest`, `3.7`, `3.7.0` (*3.7/glacier2/Dockerfile*)](https://github.com/zeroc-ice/ice-dockerfiles/blob/master/3.7/glacier2/Dockerfile)
+-   [`3.6`, `3.6.3` (*3.6/glacier2/Dockerfile*)](https://github.com/zeroc-ice/ice-dockerfiles/blob/master/3.6/glacier2/Dockerfile)
 
 # What is Glacier2?
 
