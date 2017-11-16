@@ -2,7 +2,7 @@ FROM debian:jessie
 
 MAINTAINER ZeroC, Inc. docker-maintainers@zeroc.com
 
-ENV GLACIER2_VERSION 3.6.3
+ENV GLACIER2_VERSION 3.6.4
 
 RUN apt-key adv --keyserver hkp://pgp.mit.edu:80 --recv-keys 5E6DA83306132997 \
     && echo "deb http://download.zeroc.com/Ice/3.6/debian8 stable main" >> /etc/apt/sources.list.d/ice.list \
