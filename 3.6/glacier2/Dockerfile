@@ -1,11 +1,11 @@
-FROM debian:jessie
+FROM ubuntu:16.04
 
 MAINTAINER ZeroC, Inc. docker-maintainers@zeroc.com
 
 ENV GLACIER2_VERSION 3.6.4
 
-RUN apt-key adv --keyserver hkp://pgp.mit.edu:80 --recv-keys 5E6DA83306132997 \
-    && echo "deb http://download.zeroc.com/Ice/3.6/debian8 stable main" >> /etc/apt/sources.list.d/ice.list \
+RUN apt-key adv --keyserver keyserver.ubuntu.com --recv 5E6DA83306132997 \
+    && echo "deb http://download.zeroc.com/Ice/3.6/ubuntu16.04 stable main" >> /etc/apt/sources.list.d/ice.list \
     && apt-get update \
     && apt-get install --no-install-recommends --no-install-suggests -y \
         zeroc-glacier2=${GLACIER2_VERSION}-* \
