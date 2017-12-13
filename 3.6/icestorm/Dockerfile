@@ -1,4 +1,4 @@
-FROM debian:jessie
+FROM ubuntu:16.04
 
 MAINTAINER ZeroC, Inc. docker-maintainers@zeroc.com
 
