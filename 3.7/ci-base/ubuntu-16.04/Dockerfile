@@ -3,7 +3,7 @@
 #
 FROM ubuntu:16.04
 
-ENV DOTNET_VERSION 2.0.3
+ENV DOTNET_SDK_VERSION 2.1.3
 
 RUN apt-get update && \
     apt-get -y upgrade && \
@@ -35,7 +35,7 @@ RUN apt-get update && \
         libdb++-dev \
         libdb-dev \
         default-jdk \
-        dotnet-sdk-${DOTNET_VERSION} \
+        dotnet-sdk-${DOTNET_SDK_VERSION} \
         libdb-java-dev \
         libdbus-glib-1-dev \
         libexpat-dev \
