@@ -35,7 +35,6 @@ RUN apt-get update && \
         libdb++-dev \
         libdb-dev \
         default-jdk \
-        ca-certificates-java \
         dotnet-sdk-${DOTNET_SDK_VERSION} \
         libdb-java-dev \
         libdbus-glib-1-dev \
@@ -56,6 +55,11 @@ RUN apt-get update && \
         ruby \
         ruby-dev && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+
+# https://bugs.launchpad.net/ubuntu/+source/ca-certificates-java/+bug/1739631
+# https://gist.github.com/mikaelhg/527204e746984cf9a33f7910bb8b4cb6
+RUN /usr/bin/printf '\xfe\xed\xfe\xed\x00\x00\x00\x02\x00\x00\x00\x00\xe2\x68\x6e\x45\xfb\x43\xdf\xa4\xd9\x92\xdd\x41\xce\xb6\xb2\x1c\x63\x30\xd7\x92' > /etc/ssl/certs/java/cacerts && \
+    /var/lib/dpkg/info/ca-certificates-java.postinst configure
 
 RUN python -m pip install --upgrade pip && \
     python -m pip install passlib
