@@ -1,9 +1,10 @@
 #
-# Ice Ubuntu 16.04 Base CI Docker container
+# Ice Ubuntu 18.04 Base CI Docker container
 #
-FROM ubuntu:16.04
+FROM ubuntu:18.04
 
 ENV DOTNET_SDK_VERSION 2.1
+ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update && \
     apt-get -y upgrade && \
@@ -14,7 +15,6 @@ RUN apt-get update && \
         packaging-dev \
         locales \
         software-properties-common \
-        python-software-properties \
         apt-transport-https && \
     locale-gen en_US.UTF-8 && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
@@ -25,7 +25,7 @@ ENV LC_ALL en_US.UTF-8
 # Third party repos
 RUN curl -sL https://deb.nodesource.com/setup_10.x | bash - && \
     apt-key adv --keyserver keyserver.ubuntu.com --recv BC528686B50D79E339D3721CEB3E94ADBE1229CF && \
-    apt-add-repository "deb [arch=amd64] https://packages.microsoft.com/repos/microsoft-ubuntu-xenial-prod xenial main"
+    apt-add-repository "deb [arch=amd64] https://packages.microsoft.com/repos/microsoft-ubuntu-bionic-prod bionic main"
 
 # Dependencies
 RUN apt-get update && \
