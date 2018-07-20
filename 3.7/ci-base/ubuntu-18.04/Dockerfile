@@ -35,6 +35,7 @@ RUN apt-get update && \
         libdb++-dev \
         libdb-dev \
         default-jdk \
+        ca-certificates-java \
         dotnet-sdk-${DOTNET_SDK_VERSION} \
         libdb-java-dev \
         libdbus-glib-1-dev \

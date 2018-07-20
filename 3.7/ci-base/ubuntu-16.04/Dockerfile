@@ -4,6 +4,7 @@
 FROM ubuntu:16.04
 
 ENV DOTNET_SDK_VERSION 2.1
+ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update && \
     apt-get -y upgrade && \
