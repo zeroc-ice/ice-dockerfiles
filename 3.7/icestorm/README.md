@@ -1,7 +1,7 @@
 # Supported tags and respective `Dockerfile` links
 
 -   [`latest`, `3.7`, `3.7.2` (*3.7/icestorm/Dockerfile*)](https://github.com/zeroc-ice/ice-dockerfiles/blob/master/3.7/icestorm/Dockerfile)
--   [`3.6`, `3.6.4` (*3.6/icestorm/Dockerfile*)](https://github.com/zeroc-ice/ice-dockerfiles/blob/master/3.6/icestorm/Dockerfile)
+-   [`3.6`, `3.6.5` (*3.6/icestorm/Dockerfile*)](https://github.com/zeroc-ice/ice-dockerfiles/blob/master/3.6/icestorm/Dockerfile)
 
 # What is IceStorm?
 
