@@ -1,8 +1,10 @@
 FROM ubuntu:16.04
 
-MAINTAINER ZeroC, Inc. docker-maintainers@zeroc.com
+LABEL maintainer="docker-maintainers@zeroc.com"
 
-ENV ICEBOX_VERSION 3.6.5
+ARG ICEBOX_VERSION=3.6.5
+
+ARG DEBIAN_FRONTEND=noninteractive
 
 RUN apt-key adv --keyserver keyserver.ubuntu.com --recv 5E6DA83306132997 \
     && echo "deb http://download.zeroc.com/Ice/3.6/ubuntu16.04 stable main" >> /etc/apt/sources.list.d/ice.list \

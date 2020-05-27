@@ -1,8 +1,10 @@
 FROM ubuntu:16.04
 
-MAINTAINER ZeroC, Inc. docker-maintainers@zeroc.com
+LABEL maintainer="docker-maintainers@zeroc.com"
 
-ENV ICEGRID_VERSION 3.7.3
+ARG ICEGRID_VERSION=3.7.4
+
+ARG DEBIAN_FRONTEND=noninteractive
 
 RUN apt-key adv --keyserver keyserver.ubuntu.com --recv B6391CB2CFBA643D \
     && echo "deb http://download.zeroc.com/Ice/3.7/ubuntu16.04 stable main" >> /etc/apt/sources.list.d/ice.list \
