@@ -17,4 +17,4 @@ EXPOSE 4061 4062
 
 VOLUME ["/var/lib/ice/icegrid"]
 
-ENTRYPOINT ["/usr/bin/icegridregistry", "--Ice.Config=/etc/icegridregistry.conf", "--IceGrid.Registry.Data=/var/lib/ice/icegrid"]
+ENTRYPOINT ["/usr/bin/icegridregistry", "--Ice.Config=/etc/icegridregistry.conf", "--IceGrid.Registry.LMDB.Path=/var/lib/ice/icegrid"]
