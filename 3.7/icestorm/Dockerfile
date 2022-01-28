@@ -2,7 +2,7 @@ FROM ubuntu:16.04
 
 LABEL maintainer="docker-maintainers@zeroc.com"
 
-ARG ICEBOX_VERSION=3.7.5
+ARG ICEBOX_VERSION=3.7.7
 
 ARG DEBIAN_FRONTEND=noninteractive
 

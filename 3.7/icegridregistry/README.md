@@ -1,6 +1,6 @@
 # Supported tags and respective `Dockerfile` links
 
--   [`latest`, `3.7`, `3.7.5` (*3.7/icegridregistry/Dockerfile*)](https://github.com/zeroc-ice/ice-dockerfiles/blob/master/3.7/icegridregistry/Dockerfile)
+-   [`latest`, `3.7`, `3.7.7` (*3.7/icegridregistry/Dockerfile*)](https://github.com/zeroc-ice/ice-dockerfiles/blob/master/3.7/icegridregistry/Dockerfile)
 -   [`3.6`, `3.6.5` (*3.6/icegridregistry/Dockerfile*)](https://github.com/zeroc-ice/ice-dockerfiles/blob/master/3.6/icegridregistry/Dockerfile)
 
 # What is IceGrid?
