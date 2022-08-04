@@ -2,7 +2,7 @@ FROM ubuntu:16.04
 
 LABEL maintainer="docker-maintainers@zeroc.com"
 
-ARG GLACIER2_VERSION=3.7.7
+ARG GLACIER2_VERSION=3.7.8
 
 ARG DEBIAN_FRONTEND=noninteractive
 
