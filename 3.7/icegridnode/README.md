@@ -11,8 +11,16 @@
 
 ## Start `icegridnode` service
 
+Using a configuration file:
+
+```shell
+docker run --detach --name some-icegridnode -v data:/var/lib/ice/icegrid -v /path/to/config/:/etc/icegridnode.conf:ro zeroc/icegridnode
 ```
-docker run --name some-icegridnode -v /path/to/config/:/etc/icegridnode.conf:ro -d zeroc/icegridnode
+
+Using command line arguments:
+
+```shell
+docker run --detach --name some-icegridnode zeroc/icegridnode -v data:/var/lib/ice/icegrid --IceGrid.Node.Name=MyNode --Ice.Default.Locator="IceGrid/Locator:tcp -h icegridregistry -p 4061"
 ```
 
 Refer to the  [IceGrid documentation](https://doc.zeroc.com/display/Ice/IceGrid) for more information on how to configure an IceGrid Node.
@@ -20,51 +28,3 @@ Refer to the  [IceGrid documentation](https://doc.zeroc.com/display/Ice/IceGrid)
 ## Data volume
 
 The IceGrid Node container stores its data in a Docker volume mounted at `/var/lib/ice/icegrid`.
-
-```
-docker run --name some-icegridnode -v /path/to/config:/etc/icegridnode.conf:ro -v /path/to/folder:/var/lib/ice/icegrid -d zeroc/icegridnode
-```
-
-## Sample Configuration
-
-```
-#
-# Sample configuration file for the IceGrid node daemon
-#
-
-#
-# Proxy to the IceGrid registry
-#
-Ice.Default.Locator=DemoIceGrid/Locator:tcp -h <docker icegrid registry name>  -p 4061
-#Ice.Default.Locator=DemoIceGrid/Locator:ssl -h <docker icegrid registry name>  -p 4062
-
-#
-# The name of this node; must be unique within an IceGrid deployment
-#
-IceGrid.Node.Name=node1
-
-#
-# The node object adapter listens on the loopback interface using an
-# OS-assigned port
-#
-# These endpoints must be accessible to IceGrid registries.
-#
-# Note that access to these endpoints can pose a security
-# risk (remote code execution) and therefore these endpoints should be
-# secured. See the Ice manual for more information.
-#
-IceGrid.Node.Endpoints=tcp -h <docker image name> -p <some port>
-
-#
-# Redirect the servers'stdout and stderr to files in this directory:
-#
-IceGrid.Node.Output=/var/lib/ice/icegrid
-#IceGrid.Node.RedirectErrToOut=1
-
-#
-# Logging to syslog
-#
-Ice.UseSyslog=1
-Ice.ProgramName=icegridnode (DemoIceGrid node1)
-IceGrid.Node.Trace.Replica=2
-```
