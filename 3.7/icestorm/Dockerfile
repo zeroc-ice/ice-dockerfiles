@@ -2,7 +2,7 @@ FROM ubuntu:22.04
 
 LABEL maintainer="docker-maintainers@zeroc.com"
 
-ARG ICEBOX_VERSION=3.7.9
+ARG ICEBOX_VERSION=3.7.10
 ARG DEBIAN_FRONTEND=noninteractive
 
 RUN groupadd -r ice && useradd -r -m -d /var/lib/ice -g ice ice

@@ -5,13 +5,13 @@ endef
 
 define tag
 	docker tag zeroc/$1:latest zeroc/$1:3.7
-	docker tag zeroc/$1:latest zeroc/$1:3.7.9
+	docker tag zeroc/$1:latest zeroc/$1:3.7.10
 endef
 
 define push
 	docker push zeroc/$1:latest
 	docker push zeroc/$1:3.7
-	docker push zeroc/$1:3.7.9
+	docker push zeroc/$1:3.7.10
 endef
 
 .PHONY:build
