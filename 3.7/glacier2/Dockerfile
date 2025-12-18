@@ -25,7 +25,7 @@ RUN apt-get update \
 
 RUN sed -i '/^Ice\.UseSystemdJournal=1/d' /etc/glacier2router.conf \
     && sed -i 's/^Glacier2\.Client.Endpoints=.*/Glacier2\.Client\.Endpoints=tcp -h 0\.0\.0\.0 -p 4063/' /etc/glacier2router.conf \
-    && sed -i 's/^Glacier2\.Server\.Endpoints=*/#Glacier2\.Server\.Endpoints=/' /etc/glacier2router.conf
+    && sed -i 's/^Glacier2\.Server\.Endpoints=.*/#Glacier2\.Server\.Endpoints=/' /etc/glacier2router.conf
 
 EXPOSE 4063 4064
 

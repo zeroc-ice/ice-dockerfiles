@@ -66,8 +66,6 @@ jobs:
         with:
           context: ${{ matrix.version }}/${{ matrix.image }}
           push: ${{ github.event_name != 'pull_request' }}
-          platforms: |
-            linux/amd64
-            linux/arm64
+          platforms: ${{ matrix.version == '3.6' && 'linux/amd64' || 'linux/amd64,linux/arm64' }}
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
