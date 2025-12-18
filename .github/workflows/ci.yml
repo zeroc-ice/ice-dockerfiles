@@ -34,7 +34,7 @@ jobs:
             ghcr.io/zeroc-ice/${{ matrix.image }}
           tags: |
             type=raw,value=${{ matrix.image }}
-            type=raw,value=latest,enable=${{ matrix.image == '3.8' }}
+            type=raw,value=latest,enable=${{ matrix.version == '3.8' }}
 
       - name: Login to Docker Hub
         if: github.event_name != 'pull_request'
