@@ -27,7 +27,7 @@ RUN sed -i '/^Ice.UseSystemdJournal=1/d' /etc/icegridregistry.conf \
 
 EXPOSE 4061 4062
 
-VOLUME ["/var/lib/ice/icegrid/"]
+VOLUME ["/var/lib/ice/icegrid"]
 
 COPY ./docker-entrypoint.sh /
 ENTRYPOINT ["/docker-entrypoint.sh"]
