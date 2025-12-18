@@ -9,7 +9,6 @@ RUN groupadd -r ice && useradd -r -m -d /var/lib/ice -g ice ice
 RUN apt-get update && apt-get install --no-install-recommends --no-install-suggests -y \
     ca-certificates \
     curl \
-    gpg \
     gosu \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 

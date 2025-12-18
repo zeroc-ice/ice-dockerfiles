@@ -4,7 +4,7 @@ LABEL maintainer="docker-maintainers@zeroc.com"
 
 ARG DEBIAN_FRONTEND=noninteractive
 
-RUN groupadd -r ice && useradd -r -g ice ice
+RUN groupadd -r ice && useradd -r -m -d /var/lib/ice -g ice ice
 
 RUN apt-get update && apt-get install --no-install-recommends --no-install-suggests -y \
     ca-certificates \
