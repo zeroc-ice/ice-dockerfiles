@@ -2,7 +2,6 @@ FROM ubuntu:22.04
 
 LABEL maintainer="docker-maintainers@zeroc.com"
 
-ARG ICEBOX_VERSION=3.7.10
 ARG DEBIAN_FRONTEND=noninteractive
 
 RUN groupadd -r ice && useradd -r -m -d /var/lib/ice -g ice ice
@@ -21,8 +20,8 @@ RUN mkdir -p /etc/apt/keyrings \
 
 RUN apt-get update \
     && apt-get install --no-install-recommends --no-install-suggests -y \
-    zeroc-icebox=${ICEBOX_VERSION}-* \
-    libzeroc-icestorm3.7=${ICEBOX_VERSION}-* \
+    zeroc-icebox \
+    libzeroc-icestorm3.7 \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 VOLUME ["/data"]

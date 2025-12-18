@@ -2,7 +2,6 @@ FROM ubuntu:22.04
 
 LABEL maintainer="docker-maintainers@zeroc.com"
 
-ARG GLACIER2_VERSION=3.7.10
 ARG DEBIAN_FRONTEND=noninteractive
 
 RUN groupadd -r ice && useradd -r -g ice ice
@@ -21,7 +20,7 @@ RUN mkdir -p /etc/apt/keyrings \
 
 RUN apt-get update \
     && apt-get install --no-install-recommends --no-install-suggests -y \
-    zeroc-glacier2=${GLACIER2_VERSION}-* \
+    zeroc-glacier2 \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 RUN sed -i '/^Ice\.UseSystemdJournal=1/d' /etc/glacier2router.conf \
