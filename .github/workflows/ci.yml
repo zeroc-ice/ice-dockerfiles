@@ -6,18 +6,19 @@ on:
   pull_request:
     branches: [main]
   schedule:
-    - cron: 0 0 * * 0
+    - cron: "0 0 * * 0"
 
 concurrency:
-  group: ${{ github.head_ref || github.run_id }}
+  group: ${{ github.workflow }}-${{ github.head_ref || github.run_id }}
   cancel-in-progress: true
 
 jobs:
   build:
     strategy:
       matrix:
-        version: [3.8, 3.7, 3.6]
+        version: ["3.8", "3.7", "3.6"]
         image: [glacier2, icegridregistry, icegridnode, icestorm]
+      fail-fast: false
 
     runs-on: ubuntu-latest
 
@@ -27,7 +28,7 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Docker meta
         id: meta
@@ -69,3 +70,5 @@ jobs:
           platforms: ${{ matrix.version == '3.6' && 'linux/amd64' || 'linux/amd64,linux/arm64' }}
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
