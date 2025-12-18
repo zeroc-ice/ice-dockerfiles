@@ -1,0 +1,26 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  schedule:
+    - cron: 0 0 * * 0
+
+jobs:
+  build:
+    strategy:
+      matrix:
+        version: [3.8, 3.7, 3.6]
+        image: [glacier2, icegridregistry, icegridnode, icestorm]
+
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+      packages: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
