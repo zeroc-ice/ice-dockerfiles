@@ -1,24 +1,21 @@
-FROM ubuntu:22.04
+FROM ubuntu:24.04
 
 LABEL maintainer="docker-maintainers@zeroc.com"
 
 ARG DEBIAN_FRONTEND=noninteractive
 
-RUN groupadd -r ice && useradd -r -g ice ice
+RUN groupadd -r ice && useradd -r -m -d /var/lib/ice -g ice ice
 
 RUN apt-get update && apt-get install --no-install-recommends --no-install-suggests -y \
     ca-certificates \
     curl \
-    gpg \
     gosu \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-RUN mkdir -p /etc/apt/keyrings \
-    && curl -fsSL https://zeroc.com/download/GPG-KEY-zeroc-release-B6391CB2CFBA643D |  gpg --dearmor -o /etc/apt/keyrings/zeroc.gpg \
-    && echo \
-    "deb [signed-by=/etc/apt/keyrings/zeroc.gpg] https://zeroc.com/download/ice/3.7/ubuntu22.04 stable main" | tee /etc/apt/sources.list.d/zeroc-ice-3.7.list
-
-RUN apt-get update \
+RUN curl -fsSL "https://download.zeroc.com/ice/3.8/ubuntu24.04/ice-repo-3.8_1.0_all.deb" -o /tmp/ice-repo.deb \
+    && dpkg -i /tmp/ice-repo.deb \
+    && rm /tmp/ice-repo.deb \
+    && apt-get update \
     && apt-get install --no-install-recommends --no-install-suggests -y \
     zeroc-glacier2 \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
