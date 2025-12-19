@@ -38,7 +38,7 @@ Using command line arguments:
 
 ```shell
 docker run --detach --name dsnode zeroc/dsnode \
-  --DataStorm.Node.Server.Endpoints="tcp -p 4061" \
+  --DataStorm.Node.Server.Endpoints="tcp -p 4061"
 ```
 
 Since Docker networks do not generally support multicast, the `DataStorm.Node.Server.Endpoints` property is required.
