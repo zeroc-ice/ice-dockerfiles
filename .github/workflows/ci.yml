@@ -17,7 +17,12 @@ jobs:
     strategy:
       matrix:
         version: ["3.8", "3.7", "3.6"]
-        image: [glacier2, icegridregistry, icegridnode, icestorm]
+        image: [glacier2, icegridregistry, icegridnode, icestorm, dsnode]
+        exclude:
+          - version: "3.7"
+            image: dsnode
+          - version: "3.6"
+            image: dsnode
       fail-fast: false
 
     runs-on: ubuntu-latest
