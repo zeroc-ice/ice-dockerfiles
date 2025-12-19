@@ -40,4 +40,4 @@ Using command line arguments:
 docker run --detach --name glacier2router -p 4063:4063 zeroc/glacier2
 ```
 
-Refer to the  [Glacier2 documentation](https://doc.zeroc.com/display/Ice/Glacier2) for more information on how to configure Glacier2.
+Refer to the  [Glacier2 documentation](https://docs.zeroc.com/ice/3.8/cpp/glacier2) for more information on how to configure Glacier2.

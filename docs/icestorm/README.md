@@ -40,7 +40,7 @@ From command line arguments:
 docker run --detach --name some-icestorm zeroc/icestorm --IceStorm.TopicManager.Endpoints="tcp -h 0.0.0.0 -p 9999" --IceStorm.Publish.Endpoints="tcp -h 0.0.0.0 -p 10000"
 ```
 
-Refer to the  [IceStorm documentation](https://doc.zeroc.com/display/Ice/IceStorm) for more information on how to configure IceStorm.
+Refer to the  [IceStorm documentation](https://docs.zeroc.com/ice/3.8/cpp/icestorm) for more information on how to configure IceStorm.
 
 # Data volume
 

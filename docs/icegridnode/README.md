@@ -40,7 +40,7 @@ Using command line arguments:
 docker run --detach --name some-icegridnode zeroc/icegridnode -v data:/var/lib/ice/icegrid --IceGrid.Node.Name=MyNode --Ice.Default.Locator="IceGrid/Locator:tcp -h icegridregistry -p 4061"
 ```
 
-Refer to the  [IceGrid documentation](https://doc.zeroc.com/display/Ice/IceGrid) for more information on how to configure an IceGrid Node.
+Refer to the  [IceGrid documentation](https://docs.zeroc.com/ice/3.8/cpp/icegrid) for more information on how to configure an IceGrid Node.
 
 # Data volume
 

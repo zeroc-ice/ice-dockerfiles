@@ -40,7 +40,7 @@ Using command line arguments:
 docker run --detach --name some-icegridregistry -p 4061:4061 -v data:/var/lib/ice/icegrid zeroc/icegridregistry --IceGrid.Registry.Name=MyRegistry
 ```
 
-Refer to the  [IceGrid documentation](https://doc.zeroc.com/display/Ice/IceGrid) for more information on how to configure an IceGrid Registry.
+Refer to the  [IceGrid documentation](https://docs.zeroc.com/ice/3.8/cpp/icegrid) for more information on how to configure an IceGrid Registry.
 
 # Data volume
 
