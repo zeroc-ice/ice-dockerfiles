@@ -28,7 +28,7 @@ RUN sed -i '/^Ice.UseSystemdJournal=1/d' /etc/icegridregistry.conf \
     && sed -i 's/^IceGrid\.Registry\.Server\.Endpoints=.*/IceGrid\.Registry\.Server\.Endpoints=tcp -h 0\.0\.0\.0/' /etc/icegridregistry.conf \
     && sed -i 's/^IceGrid\.Registry\.Internal\.Endpoints=.*/IceGrid\.Registry\.Internal\.Endpoints=tcp -h 0\.0\.0\.0/' /etc/icegridregistry.conf
 
-EXPOSE 4061 4062
+EXPOSE 4061
 
 VOLUME ["/var/lib/ice/icegrid"]
 

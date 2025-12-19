@@ -26,7 +26,7 @@ RUN sed -i '/^Ice.UseSystemdJournal=1/d' /etc/icegridnode.conf \
     && sed -i 's/^Ice.Default.Locator=.*/#Ice.Default.Locator=/' /etc/icegridnode.conf \
     && sed -i 's/IceGrid.Node.Endpoints=.*/IceGrid.Node.Endpoints=tcp -h 0\.0\.0\.0/' /etc/icegridnode.conf
 
-EXPOSE 4061 4062
+EXPOSE 4061
 
 VOLUME ["/var/lib/ice/icegrid"]
 

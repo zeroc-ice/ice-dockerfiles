@@ -11,7 +11,7 @@ RUN apt-key adv --keyserver keyserver.ubuntu.com --recv 5E6DA83306132997 \
     zeroc-icegrid \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-EXPOSE 4061 4062
+EXPOSE 4061
 
 VOLUME ["/var/lib/ice/icegrid"]
 
