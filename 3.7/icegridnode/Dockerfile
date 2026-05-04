@@ -23,7 +23,7 @@ RUN apt-get update \
     zeroc-icegrid \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-RUN sed -i '/^Ice.UseSystemdJournal=1/d' /etc/icegridnode.conf \
+RUN sed -i '/^Ice\.UseSystemdJournal=1/d' /etc/icegridnode.conf \
     && sed -i 's/^IceGrid\.Node\.Data=.*/IceGrid\.Node\.Data=\/var\/lib\/ice\/icegrid/' /etc/icegridnode.conf \
     && sed -i 's/^IceGrid\.Node\.Output=.*/#IceGrid\.Node\.Output=\/var\/lib\/ice\/icegrid/' /etc/icegridnode.conf \
     && sed -i 's/^Ice.Default.Locator=.*/#Ice.Default.Locator=/' /etc/icegridnode.conf \
