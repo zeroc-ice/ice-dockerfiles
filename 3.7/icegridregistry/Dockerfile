@@ -14,9 +14,9 @@ RUN apt-get update && apt-get install --no-install-recommends --no-install-sugge
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 RUN mkdir -p /etc/apt/keyrings \
-    && curl -fsSL https://zeroc.com/download/GPG-KEY-zeroc-release-B6391CB2CFBA643D |  gpg --dearmor -o /etc/apt/keyrings/zeroc.gpg \
+    && curl -fsSL https://download.zeroc.com/GPG-KEY-zeroc-release-B6391CB2CFBA643D |  gpg --dearmor -o /etc/apt/keyrings/zeroc.gpg \
     && echo \
-    "deb [signed-by=/etc/apt/keyrings/zeroc.gpg] https://zeroc.com/download/ice/3.7/ubuntu22.04 stable main" | tee /etc/apt/sources.list.d/zeroc-ice-3.7.list
+    "deb [signed-by=/etc/apt/keyrings/zeroc.gpg] https://download.zeroc.com/ice/3.7/ubuntu22.04 stable main" | tee /etc/apt/sources.list.d/zeroc-ice-3.7.list
 
 RUN apt-get update \
     && apt-get install --no-install-recommends --no-install-suggests -y \
