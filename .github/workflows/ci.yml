@@ -65,6 +65,9 @@ jobs:
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v4
         with:
+          # Pin QEMU to v8.1.5 to avoid a segfault in ARM64 ldconfig (libc-bin 2.35)
+          # when building linux/arm64 images. Older QEMU versions do not support the
+          # ARM64 instructions used by glibc 2.35's ldconfig binary.
           image: tonistiigi/binfmt:qemu-v8.1.5
 
       - name: Set up Docker Buildx
